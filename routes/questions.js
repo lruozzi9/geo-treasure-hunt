@@ -17,7 +17,8 @@ function asyncHandler(cb){
 
 router.get('/', asyncHandler( async (req, res) => {
     const questions = await questionService.questions;
-    res.json(questions);
+    // res.json(questions);
+    res.render('questions', { questions: questions });
 }));
 
 router.post('/', asyncHandler( async (req, res) => {

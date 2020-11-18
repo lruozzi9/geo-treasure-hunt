@@ -1,0 +1,18 @@
+extends ./layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+
+  table
+    tr
+      th ID
+      th Codice
+      th Domanda
+      th Risposta
+    each question in questions
+      tr
+        td= question.id
+        td= question.code
+        td= question.question
+        td= question.answer
